@@ -7,7 +7,7 @@ digraph graphname {
         label = "Router"
         Routing
         RouterOutput
-	}    
+    }
     subgraph cluster_app {
         label = "App";
         subgraph cluster_ph{
