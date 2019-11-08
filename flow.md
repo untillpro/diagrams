@@ -4,7 +4,7 @@ digraph graphname {
     compound=true
 
     subgraph cluster_router_out {
-		label = "Router"
+        label = "Router"
         Routing
         RouterOutput
 	}    
@@ -18,10 +18,10 @@ digraph graphname {
             Writer
         }
     }
-	subgraph cluster_router_in {
-		label = "Router"
+    subgraph cluster_router_in {
+        label = "Router"
         RouterInput
-	}
+    }
 
     Cassandra
 

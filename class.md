@@ -1,6 +1,5 @@
 ```dot
 digraph graphname {
-
     graph[rankdir=BT splines=ortho]
     node [ fontname = "Cambria" shape = "record" fontsize = 12]
     edge [ dir=both  arrowtail = none arrowhead=empty ]
