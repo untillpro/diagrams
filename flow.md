@@ -1,6 +1,6 @@
 ```dot
 digraph graphname {
-    node [ fontname = "Cambria" shape = "record" fontsize = 12]
+    node [ fontname = "Cambria" shape = "rect" fontsize = 12]
     compound=true
 
     subgraph cluster_router_out {
@@ -38,11 +38,3 @@ digraph graphname {
 }
 ```
 
-# Graphviz Links
-
-- http://www.graphviz.org/documentation/
-  - https://graphviz.gitlab.io/_pages/doc/info/shapes.html
-  - https://graphviz.gitlab.io/_pages/doc/info/arrows.html
-- `Cluster`: https://graphviz.gitlab.io/_pages/Gallery/directed/cluster.html
-- http://www.graphviz.org/doc/info/attrs.html
-- http://www.graphviz.org/gallery/
