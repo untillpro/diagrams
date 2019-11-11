@@ -1,21 +1,22 @@
 ```dot
-digraph graphname {
+graph graphname {
 
     graph[rankdir=TB splines=ortho]
     node [ fontname = "Cambria" shape = "record" fontsize = 12]
     edge [dir=both arrowhead=none arrowtail=none]
     Networks[label="Social Networks" style=dashed]
 
-    Family -> Mother
-    Family -> Father
-    Family -> Pet [arrowhead=odot]
-    Family -> Child [arrowhead=crowodot]
-    Father -> Hobby [arrowhead=crow]
-    Hobby -> Foto[arrowtail=empty]
-    Hobby -> Fishing[arrowtail=empty]
-    Mother -> Networks
-    Networks -> vk
-    vk -> ok
+    Family -- Mother
+    Family -- Father
+    Family -- Pet [arrowhead=odot]
+    Family -- Child [arrowhead=crowodot]
+    Father -- Hobby [arrowhead=crow]
+    Hobby -- Foto[arrowtail=empty]
+    Hobby -- Fishing[arrowtail=empty]
+    Mother -- Networks
+    Networks -- vk
+    vk -- ok
+
 }
 ```
 
