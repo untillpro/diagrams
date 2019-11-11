@@ -1,15 +1,14 @@
 ```dot
 digraph graphname {
 
-    graph[rankdir=BT splines=ortho]
+    graph[rankdir=TB splines=ortho]
     node [ fontname = "Cambria" shape = "record" fontsize = 12]
     edge [dir=both arrowhead=none arrowtail=none]
-
-    Mother -> Family
-    Father -> Family
-    Pet -> Family [arrowtail=odot]
-    Child -> Family [arrowtail=crowodot]
-    Hobby -> Father [arrowtail=crow]
+    Family -> Mother
+    Family -> Father
+    Family -> Pet [arrowhead=odot]
+    Family -> Child [arrowhead=crowodot]
+    Father -> Hobby [arrowhead=crow]
 }
 ```
 
