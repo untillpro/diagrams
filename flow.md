@@ -3,38 +3,25 @@ digraph graphname {
     node [ fontname = "Cambria" shape = "rect" fontsize = 12]
     compound=true
 
-    subgraph cluster_router_out {
+    subgraph cluster_router {
         label = "Router"
         Routing
-        RouterOutput
     }
     subgraph cluster_app {
         label = "App";
-        subgraph cluster_ph{
-            label = "PartitionHandler"
-            Cache
-            Validator
-            Blogger
-            Writer
-        }
-    }
-    subgraph cluster_router_in {
-        label = "Router"
-        RouterInput
+        Validator
     }
 
-    Cassandra
+    Cassandra[shape=cylinder]
 
-    Client -> Traefik
-    Traefik -> Routing
-    Routing -> RouterOutput
+    Client -> Routing
+    Routing -> Validator [label="Line between clusters" ltail=cluster_router lhead=cluster_app]
 
-    RouterOutput-> Cache
-    Cache -> Validator
-    Validator -> Blogger
-    Blogger -> Writer
-    Writer -> RouterInput
-    Cassandra -> Writer  [style=dotted dir=none lhead=cluster_ph]
+    Cassandra -> Writer [label="Dotted line" style=dotted dir=none]
+    Cassandra -> Reader [label="Dashed line" style=dashed dir=none]    
 }
 ```
 
+# Links
+
+- https://stackoverflow.com/questions/7115870/creating-straight-edges-in-graphviz
