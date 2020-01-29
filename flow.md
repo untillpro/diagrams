@@ -13,9 +13,12 @@ digraph graphname {
     }
 
     Cassandra[shape=cylinder]
+    Writer[shape=parallelogram]
+    End[style=rounded]
 
     Client -> Routing
     Routing -> Validator [label="Line between clusters" ltail=cluster_router lhead=cluster_app]
+    Validator -> End
 
     Cassandra -> Writer [label="Dotted line" style=dotted dir=none]
     Cassandra -> Reader [label="Dashed line" style=dashed dir=none]    
