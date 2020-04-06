@@ -1,5 +1,6 @@
 ```dot
 digraph graphname {
+    graph [pad="0.1", ranksep="0.2", nodesep="0.3"]
     node [ fontname = "Cambria" shape = "rect" fontsize = 12]
     compound=true
 
